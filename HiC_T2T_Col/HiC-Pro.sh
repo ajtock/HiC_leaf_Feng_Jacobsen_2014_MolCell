@@ -9,7 +9,7 @@
 # digest_genome.sh
 # bowtie2_index_HiC_Pro.sh
 
-EXECDIR=/home/ajt200/envs_miniconda3/HiC_Pro/HiC-Pro-3.0.0/bin
+EXECDIR=/home/ajt200/envs_miniconda3/HiC_Pro/HiC-Pro_3.0.0/bin
 
 source activate HiC_Pro
 
