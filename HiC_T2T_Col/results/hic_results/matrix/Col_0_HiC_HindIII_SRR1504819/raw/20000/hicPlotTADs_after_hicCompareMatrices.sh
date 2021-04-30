@@ -16,11 +16,10 @@ OPERATION=$6
 
 source activate HiCExplorer
 
-hicPlotTADs --tracks hic_${CORRECTION}_tracks.ini \
+hicPlotTADs --tracks ${OPERATION}_${SAMPLE1}_${SAMPLE2}_${GENOME}_${RESOLUTION}_norm_range_${CORRECTION}_hic_tracks.ini \
             --outFileName ${OPERATION}_${SAMPLE1}_${SAMPLE2}_${GENOME}_${RESOLUTION}_norm_range_${CORRECTION}_hicPlotTADs.pdf \
-            --BED CEN.bed \
+            --BED CEN_1MbPERI.bed \
             --width 40 \
-            --dpi 300 \
-            --title "${OPERATION} ${SAMPLE1} ${SAMPLE2}"
+            --dpi 300
 
 conda deactivate
