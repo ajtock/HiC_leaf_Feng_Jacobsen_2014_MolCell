@@ -5,7 +5,7 @@
 # From https://hicexplorer.readthedocs.io/en/latest/content/tools/hicPlotMatrix.html
 
 # Usage:
-# ./hicPlotMatrix_after_hicCompareMatrices.sh met1_3_HiC_HindIII_SRR1504825 Col_0_HiC_HindIII_SRR1504819 T2T_Col '20000' norm_range KR log2ratio
+# ./hicPlotMatrix_after_hicCompareMatrices.sh met1_3_HiC_HindIII_SRR1504825 Col_0_HiC_HindIII_SRR1504819 T2T_Col '1000' norm_range KR log2ratio
 
 SAMPLE1=$1
 SAMPLE2=$2

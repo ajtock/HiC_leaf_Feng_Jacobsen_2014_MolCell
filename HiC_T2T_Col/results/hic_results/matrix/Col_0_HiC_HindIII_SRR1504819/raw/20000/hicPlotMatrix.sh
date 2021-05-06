@@ -5,7 +5,7 @@
 # From https://hicexplorer.readthedocs.io/en/latest/content/tools/hicPlotMatrix.html
 
 # Usage:
-# ./hicPlotMatrix.sh Col_0_HiC_HindIII_SRR1504819 T2T_Col '100000' smallest KR
+# ./hicPlotMatrix.sh Col_0_HiC_HindIII_SRR1504819 T2T_Col '1000' norm_range KR
 
 SAMPLE=$1
 GENOME=$2
@@ -19,7 +19,7 @@ hicPlotMatrix --matrix ${SAMPLE}_${GENOME}_${RESOLUTION}_${NORM}_${CORRECTION}.h
               --outFileName ${SAMPLE}_${GENOME}_${RESOLUTION}_${NORM}_${CORRECTION}.pdf \
               --perChromosome \
               --chromosomeOrder Chr1 Chr2 Chr3 Chr4 Chr5 \
-              --scoreName "${CORRECTION} counts" \
+              --scoreName "Hi-C ${CORRECTION} counts" \
               --dpi 300 \
               --increaseFigureWidth 1 \
               --increaseFigureHeight 0.1 \

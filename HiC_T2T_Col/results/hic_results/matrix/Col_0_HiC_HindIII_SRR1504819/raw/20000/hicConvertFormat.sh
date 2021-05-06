@@ -12,7 +12,7 @@
 # HiCPro file format needs an additional bed file as input."
 
 # Usage:
-# ./hicConvertFormat.sh Col_0_HiC_HindIII_SRR1504819 T2T_Col '20000' '100000'
+# ./hicConvertFormat.sh Col_0_HiC_HindIII_SRR1504819 T2T_Col '20000' '20000'
 
 SAMPLE=$1
 GENOME=$2
