@@ -5,7 +5,7 @@
 # From https://hicexplorer.readthedocs.io/en/latest/content/tools/hicFindTADs.html
 
 # Usage:
-# ./hicFindTADs.sh Col_0_HiC_HindIII_SRR1504819 T2T_Col '20000' norm_range KR 0.10
+# ./hicFindTADs.sh Col_0_HiC_HindIII_SRR1504819 T2T_Col '20000' norm_range KR 0.05
 
 SAMPLE1=$1
 GENOME=$2
