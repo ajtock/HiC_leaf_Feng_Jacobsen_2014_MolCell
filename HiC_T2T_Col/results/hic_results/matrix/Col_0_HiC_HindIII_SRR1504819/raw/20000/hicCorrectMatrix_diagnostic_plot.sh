@@ -12,9 +12,11 @@ GENOME=$2
 RESOLUTION=$3
 NORM=$4
 
+[ -d plots/ ] || mkdir -p plots/
+
 source activate HiCExplorer
 
 hicCorrectMatrix diagnostic_plot --matrix ${SAMPLE}_${GENOME}_${RESOLUTION}_${NORM}.h5 \
-                                 --plotName ${SAMPLE}_${GENOME}_${RESOLUTION}_${NORM}_diagnostic.png
+                                 --plotName plots/${SAMPLE}_${GENOME}_${RESOLUTION}_${NORM}_diagnostic.png
 
 conda deactivate

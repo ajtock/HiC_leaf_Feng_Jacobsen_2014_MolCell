@@ -15,10 +15,12 @@ NORM=$5
 CORRECTION=$6
 OPERATION=$7
 
+[ -d plots/ ] || mkdir -p plots/
+
 source activate HiCExplorer
 
 hicPlotTADs --tracks ${OPERATION}_${SAMPLE1}_${SAMPLE2}_${GENOME}_${RESOLUTION}_${NORM}_${CORRECTION}_hic_tracks.ini \
-            --outFileName ${OPERATION}_${SAMPLE1}_${SAMPLE2}_${GENOME}_${RESOLUTION}_${NORM}_${CORRECTION}_hicPlotTADs.pdf \
+            --outFileName plots/${OPERATION}_${SAMPLE1}_${SAMPLE2}_${GENOME}_${RESOLUTION}_${NORM}_${CORRECTION}_hicPlotTADs.pdf \
             --BED CEN.bed \
             --width 40 \
             --dpi 300

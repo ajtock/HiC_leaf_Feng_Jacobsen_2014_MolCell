@@ -15,10 +15,12 @@ CORRECTION=$5
 OPERATION=$6
 REGION=$7
 
+[ -d plots/ ] || mkdir -p plots/
+
 source activate HiCExplorer
 
 hicPlotMatrix --matrix ${OPERATION}_${SAMPLE1}_${SAMPLE2}_${GENOME}_${RESOLUTION}_norm_range_${CORRECTION}.h5 \
-              --outFileName ${OPERATION}_${SAMPLE1}_${SAMPLE2}_${GENOME}_${RESOLUTION}_norm_range_${CORRECTION}_${REGION}.pdf \
+              --outFileName plots/${OPERATION}_${SAMPLE1}_${SAMPLE2}_${GENOME}_${RESOLUTION}_norm_range_${CORRECTION}_${REGION}.pdf \
               --region ${REGION} \
               --bigwig /home/ajt200/analysis/repeats/CEN180_in_T2T_Col/CENAthila_in_T2T_Col_Chr1_Chr2_Chr3_Chr4_Chr5.bw \
               --vMinBigwig 0 \

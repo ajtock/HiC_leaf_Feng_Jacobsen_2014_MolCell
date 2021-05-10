@@ -15,10 +15,12 @@ NORM=$5
 CORRECTION=$6
 OPERATION=$7
 
+[ -d plots/ ] || mkdir -p plots/
+
 source activate HiCExplorer
 
 hicPlotMatrix --matrix ${OPERATION}_${SAMPLE1}_${SAMPLE2}_${GENOME}_${RESOLUTION}_${NORM}_${CORRECTION}.h5 \
-              --outFileName ${OPERATION}_${SAMPLE1}_${SAMPLE2}_${GENOME}_${RESOLUTION}_${NORM}_${CORRECTION}.pdf \
+              --outFileName plots/${OPERATION}_${SAMPLE1}_${SAMPLE2}_${GENOME}_${RESOLUTION}_${NORM}_${CORRECTION}.pdf \
               --perChromosome \
               --chromosomeOrder Chr1 Chr2 Chr3 Chr4 Chr5 \
               --scoreName "Log2(met1-3/Col-0) Hi-C ${CORRECTION} counts" \
