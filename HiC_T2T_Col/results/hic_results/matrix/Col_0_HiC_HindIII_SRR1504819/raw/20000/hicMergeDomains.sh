@@ -13,11 +13,13 @@ NORM=$3
 CORRECTION=$4
 THRESHOLD=$5
 
+[ -d plots/ ] || mkdir -p  plots/
+
 source activate HiCExplorer
 
-hicMergeDomains --domainFiles ${SAMPLE1}_${GENOME}_1000_${NORM}_${CORRECTION}_threshold${THRESHOLD}_domains.bed ${SAMPLE1}_${GENOME}_5000_${NORM}_${CORRECTION}_threshold${THRESHOLD}_domains.bed ${SAMPLE1}_${GENOME}_10000_${NORM}_${CORRECTION}_threshold${THRESHOLD}_domains.bed ${SAMPLE1}_${GENOME}_20000_${NORM}_${CORRECTION}_threshold${THRESHOLD}_domains.bed ${SAMPLE1}_${GENOME}_50000_${NORM}_${CORRECTION}_threshold${THRESHOLD}_domains.bed \
-                --outputMergedList ${SAMPLE1}_${GENOME}_1000_5000_10000_20000_50000_${NORM}_${CORRECTION}_threshold${THRESHOLD}_merged_domains.bed \
-                --outputRelationList ${SAMPLE1}_${GENOME}_1000_5000_10000_20000_50000_${NORM}_${CORRECTION}_threshold${THRESHOLD}_relationship_list.txt \
-                --outputTreePlotPrefix ${SAMPLE1}_${GENOME}_1000_5000_10000_20000_50000_${NORM}_${CORRECTION}_threshold${THRESHOLD}_relationship_tree_
+hicMergeDomains --domainFiles ${SAMPLE1}_${GENOME}_1000_${NORM}_${CORRECTION}_threshold${THRESHOLD}_domains.bed ${SAMPLE1}_${GENOME}_5000_${NORM}_${CORRECTION}_threshold${THRESHOLD}_domains.bed ${SAMPLE1}_${GENOME}_10000_${NORM}_${CORRECTION}_threshold${THRESHOLD}_domains.bed ${SAMPLE1}_${GENOME}_20000_${NORM}_${CORRECTION}_threshold${THRESHOLD}_domains.bed ${SAMPLE1}_${GENOME}_50000_${NORM}_${CORRECTION}_threshold${THRESHOLD}_domains.bed ${SAMPLE1}_${GENOME}_100000_${NORM}_${CORRECTION}_threshold${THRESHOLD}_domains.bed \
+                --outputMergedList ${SAMPLE1}_${GENOME}_1000_5000_10000_20000_50000_100000_${NORM}_${CORRECTION}_threshold${THRESHOLD}_merged_domains.bed \
+                --outputRelationList ${SAMPLE1}_${GENOME}_1000_5000_10000_20000_50000_100000_${NORM}_${CORRECTION}_threshold${THRESHOLD}_relationship_list.txt \
+                --outputTreePlotPrefix plots/${SAMPLE1}_${GENOME}_1000_5000_10000_20000_50000_100000_${NORM}_${CORRECTION}_threshold${THRESHOLD}_relationship_tree
 
 conda deactivate
