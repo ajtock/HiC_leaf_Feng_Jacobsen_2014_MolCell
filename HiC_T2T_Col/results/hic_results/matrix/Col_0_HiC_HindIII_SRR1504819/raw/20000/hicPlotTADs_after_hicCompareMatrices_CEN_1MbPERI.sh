@@ -5,7 +5,7 @@
 # From https://hicexplorer.readthedocs.io/en/latest/content/tools/hicPlotTADs.html
 
 # Usage:
-# ./hicPlotTADs_after_hicCompareMatrices_CEN_1MbPERI.sh met1_3_HiC_HindIII_SRR1504825 Col_0_HiC_HindIII_SRR1504819 T2T_Col '20000' norm_range KR log2ratio
+# ./hicPlotTADs_after_hicCompareMatrices_CEN_1MbPERI.sh ddm1_2_HiC_HindIII_SRR1504824 Col_0_HiC_HindIII_SRR1504819 T2T_Col '20000' norm_range KR log2ratio
 
 SAMPLE1=$1
 SAMPLE2=$2
