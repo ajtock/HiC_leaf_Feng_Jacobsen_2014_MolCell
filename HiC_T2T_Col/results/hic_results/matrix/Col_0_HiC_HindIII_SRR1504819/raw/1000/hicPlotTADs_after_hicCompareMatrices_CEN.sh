@@ -5,7 +5,7 @@
 # From https://hicexplorer.readthedocs.io/en/latest/content/tools/hicPlotTADs.html
 
 # Usage:
-# ./hicPlotTADs_after_hicCompareMatrices.sh met1_3_HiC_HindIII_SRR1504825 Col_0_HiC_HindIII_SRR1504819 T2T_Col '20000' norm_range KR log2ratio
+# ./hicPlotTADs_after_hicCompareMatrices_CEN.sh met1_3_HiC_HindIII_SRR1504825 Col_0_HiC_HindIII_SRR1504819 T2T_Col '1000' norm_range KR log2ratio
 
 SAMPLE1=$1
 SAMPLE2=$2
@@ -19,7 +19,7 @@ source activate HiCExplorer
 
 hicPlotTADs --tracks ${OPERATION}_${SAMPLE1}_${SAMPLE2}_${GENOME}_${RESOLUTION}_${NORM}_${CORRECTION}_hic_tracks.ini \
             --outFileName ${OPERATION}_${SAMPLE1}_${SAMPLE2}_${GENOME}_${RESOLUTION}_${NORM}_${CORRECTION}_hicPlotTADs.pdf \
-            --BED CEN_1MbPERI.bed \
+            --BED CEN.bed \
             --width 40 \
             --dpi 300
 

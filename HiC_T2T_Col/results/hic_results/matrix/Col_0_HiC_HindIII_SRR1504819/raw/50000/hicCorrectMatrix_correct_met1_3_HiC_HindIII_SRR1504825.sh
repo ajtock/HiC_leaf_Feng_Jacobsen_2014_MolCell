@@ -5,7 +5,7 @@
 # From https://hicexplorer.readthedocs.io/en/latest/content/tools/hicCorrectMatrix.html#correct
 
 # Usage:
-# ./hicCorrectMatrix_correct.sh Col_0_HiC_HindIII_SRR1504819 T2T_Col '20000' norm_range KR
+# ./hicCorrectMatrix_correct_met1_3_HiC_HindIII_SRR1504825.sh met1_3_HiC_HindIII_SRR1504825 T2T_Col '50000' norm_range KR
 
 SAMPLE=$1
 GENOME=$2
@@ -17,7 +17,7 @@ source activate HiCExplorer
 
 hicCorrectMatrix correct --matrix ${SAMPLE}_${GENOME}_${RESOLUTION}_${NORM}.h5 \
                          --correctionMethod ${CORRECTION} \
-                         --filterThreshold -2.0680317931672136 3 \
+                         --filterThreshold -3.0618115343465275 5 \
                          --outFileName ${SAMPLE}_${GENOME}_${RESOLUTION}_${NORM}_${CORRECTION}.h5
 
 conda deactivate

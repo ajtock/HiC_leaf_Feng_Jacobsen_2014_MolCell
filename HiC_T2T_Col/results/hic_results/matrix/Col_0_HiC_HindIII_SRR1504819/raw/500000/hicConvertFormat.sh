@@ -12,21 +12,20 @@
 # HiCPro file format needs an additional bed file as input."
 
 # Usage:
-# ./hicConvertFormat_h5tohic.sh log2ratio_met1_3_HiC_HindIII_SRR1504825_Col_0_HiC_HindIII_SRR1504819 T2T_Col '100000' '100000' norm_range KR
+# ./hicConvertFormat.sh Col_0_HiC_HindIII_SRR1504819 T2T_Col '500000' '500000'
 
 SAMPLE=$1
 GENOME=$2
 BINSIZE=$3
 RESOLUTION=$4
-NORM=$5
-CORRECTION=$6
 
 source activate HiCExplorer
 
-hicConvertFormat --matrices ${SAMPLE}_${GENOME}_${BINSIZE}_${NORM}_${CORRECTION}.h5 \
-                 --outFileName ${SAMPLE}_${GENOME}_${RESOLUTION}_${NORM}_${CORRECTION}.hic \
-                 --inputFormat h5 \
-                 --outputFormat hic \
+hicConvertFormat --matrices ${SAMPLE}_${BINSIZE}.matrix \
+                 --outFileName ${SAMPLE}_${GENOME}_${RESOLUTION}.h5 \
+                 --inputFormat hicpro \
+                 --outputFormat h5 \
+                 --bedFileHicpro ${SAMPLE}_${BINSIZE}_abs.bed \
                  --resolutions ${RESOLUTION}
 
 conda deactivate

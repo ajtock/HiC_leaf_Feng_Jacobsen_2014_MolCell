@@ -5,7 +5,7 @@
 # From https://hicexplorer.readthedocs.io/en/latest/content/tools/hicNormalize.html
 
 # Usage:
-# ./hicNormalize.sh Col_0_HiC_HindIII_SRR1504819 T2T_Col '100000'
+# ./hicNormalize_norm_range.sh Col_0_HiC_HindIII_SRR1504819 T2T_Col '250000'
 
 SAMPLE=$1
 GENOME=$2

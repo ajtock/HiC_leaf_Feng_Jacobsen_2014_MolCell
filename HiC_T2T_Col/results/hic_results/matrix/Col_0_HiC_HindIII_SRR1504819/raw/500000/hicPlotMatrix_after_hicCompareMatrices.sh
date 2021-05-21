@@ -5,7 +5,7 @@
 # From https://hicexplorer.readthedocs.io/en/latest/content/tools/hicPlotMatrix.html
 
 # Usage:
-# ./hicPlotMatrix_after_hicCompareMatrices.sh met1_3_HiC_HindIII_SRR1504825 Col_0_HiC_HindIII_SRR1504819 T2T_Col '100000' norm_range KR log2ratio
+# ./hicPlotMatrix_after_hicCompareMatrices.sh met1_3_HiC_HindIII_SRR1504825 Col_0_HiC_HindIII_SRR1504819 T2T_Col '500000' norm_range KR log2ratio
 
 SAMPLE1=$1
 SAMPLE2=$2
@@ -24,8 +24,6 @@ hicPlotMatrix --matrix ${OPERATION}_${SAMPLE1}_${SAMPLE2}_${GENOME}_${RESOLUTION
               --perChromosome \
               --chromosomeOrder Chr1 Chr2 Chr3 Chr4 Chr5 \
               --scoreName "Log2(met1-3/Col-0) Hi-C ${CORRECTION} counts" \
-              --vMin -3.0 \
-              --vMax 3.0 \
               --rotationX 45 \
               --dpi 300 \
               --increaseFigureWidth 1 \
